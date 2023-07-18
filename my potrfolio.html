@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بورتفوليوالصديق عبدالواحد</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Font1&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.css">
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-family: Arial, sans-serif;
+ background-color:w; /* تعديل شفافية اللون هنا */
+  
+
+      background-repeat: repeat;
+      background-size: cover;
+    }
+    span {
+  font-size: 18px;
+  white-space: nowrap; /* للسماح فقط بسطر واحد بدون السطور المتعددة */
+  overflow: hidden; /* لإخفاء النص الزائد */
+  border-right: 2px solid black; /* إضافة خط تحت النص لتمثيل الكتابة التتابعية */
+  animation: typewriter 5s steps(50) infinite;
+  color: #964B00 ;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+h1 {
+  padding-left: 15px;
+  font-size: 18px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white; /* لتحديد اللون البني */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold; /* لجعل نمط الخط ضخماً */
+  background-color: black;
+  width: 100%;
+  overflow: hidden;
+}
+
+h2{
+  color:#964B00 ;
+  font-size: 14px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+p {
+  font-size: 14px;
+  color: black;
+  font-family: 'Roboto', sans-serif; /* استخدام خط Roboto */
+}
+        .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: block;
+    }
+    h5 {
+      font-size:14px;
+      color:#964B00 ;
+  animation: scale 2s infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+    .about-me {
+      text-align: center;
+      margin-bottom: 20px;
+     
+      text-align: center;
+      text-transform: uppercase;
+
+      padding: 0px;
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .burger-image {
+      margin: 50px 0;
+    }
+
+@media (max-width: 767px) {
+  .card {
+    width: calc(50% - 20px); /* عرض الكارد يكون نصف عرض الشاشة مع الهوامش */
+    margin: 10px 5px; /* تقليل المسافة العمودية بين الكروت */
+  }
+}
+
+    button {
+      margin-top: 10px;
+    }
+
+    .o-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
+    
+
+.skills-list {
+  margin-bottom: 10px;
+  
+}
+
+.skill-item {
+  margin-bottom: 5px;
+}
+
+.progress {
+      height: 10px;
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      animation: pulse 2s infinite;
+    }
+
+    .bg-success {
+      background-color: #28a745;
+    }
+
+    .bg-info {
+      background-color: #17a2b8;
+    }
+
+    .bg-warning {
+      background-color: #ffc107;
+    }
+
+    .bg-danger {
+      background-color: #dc3545;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 10px 5px rgba(0, 123, 255, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 20px 10px rgba(0, 123, 255, 0.5);
+      }
+      100% {
+        box-shadow: 0 0 10px 5px rgba(0, 123, 255, 0.3);
+      }
+    }
+  
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.card {
+  width: 40%;
+  max-width: 100%;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.5); /* لون زجاجي شفاف */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+  animation: pulsate 2s infinite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* تغيير لون الإضاءة إلى أسود شفاف */
+}
+
+.card-content {
+  background-color: rgba(255, 255, 255, 0.5); /* لون زجاجي شفاف */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  animation: pulsate 2s infinite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* تغيير لون الإضاءة إلى أسود شفاف */
+  padding: 20px;
+  max-width: 82%;
+  width: 100%;
+}
+
+.card-content input[type="text"],
+.card-content textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.card-content h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  margin-bottom: 20px;
+}
+
+.card-content button {
+  padding: 10px 20px;
+  background-color: #964B00;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+      .social-icons {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+.social-icons li {
+margin: 0 20px;
+}
+
+
+  .social-icons a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    transition: background-color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    background-color: #0056b3;
+  }
+  .card-Project {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* لون زجاجي شفاف */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  animation: pulsate 2s infinite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* تغيير لون الإضاءة إلى أسود شفاف */
+  padding: 20px;
+  max-width: 82%;
+  width: 100%;
+}
+#openSidebar {
+  position: fixed;
+  
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white ;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* تحديد اليمين بقيمة سالبة لإخفاء القائمة الجانبية */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* أسود خفيف زجاجي شفاف جداً */
+  transition: right 0.3s ease; /* تغيير الاتجاه من left إلى right */
+  z-index: 998;
+}
+.sidebar-content {
+  padding: 20px;
+}
+
+h2 {
+  
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+#closeSidebar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+footer {
+      background-color: black ;
+      text-align: center;
+      padding: 20px 10px;
+      position: ;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      margin-top: 200px;
+      color: white;
+
+    }
+    
+    .footer-text {
+      font-size: 18px;
+    }
+ 
+   
+    .fa-chalkboard:before {
+  content: "\f51b";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: black;
+}
+
+.fa-user:before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: black;
+}
+.tools-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tools-image {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  }
+  .social-icons a i {
+    color: black;
+  }
+  </style>
+</head>
+<header><button id="openSidebar"><i class="fas fa-bars"></i></button>
+<div id="sidebar">
+  <div class="sidebar-content">
+    <h2>القائمة الجانبية</h2>
+    <ul>
+      <li>القسم الأول</li>
+      <li>القسم الثاني</li>
+      <li>القسم الثالث</li>
+    </ul>
+    <button id="closeSidebar"><i class="fas fa-times"></i></button>
+  </div>
+</div>
+</header>
+<body>
+
+    
+  
+              
+              <h1>Portfolio Al-Siddiq Abdel-Wahed</h1>
+
+  
+      
+      
+      
+      <img src="https://cdn.arageek.com/magazine/2021/04/encyclopedia-%D9%83%D9%8A%D9%81-%D8%AA%D8%B5%D8%A8%D8%AD-%D9%85%D8%A8%D8%B1%D9%85%D8%AC-%D9%85%D8%AD%D8%AA%D8%B1%D9%81.jpg" alt="صورة الملف الشخصي" class="profile-image">
+      <br>
+      
+      <span id="typewriter"></span>
+      
+      
+       <br>
+       
+      <div class="about-me">
+        <p>
+         im a front-end programmer and graphic designer.
+  
+          I have a passion for integrating aesthetics and functionality in the user interfaces I design. With my skills in web development and graphic design, I always strive to achieve a unique and attention-grabbing user experience.
+        </p>
+  
+      </div>
+<div class="o-form">
+
+  <div class="card">
+    <h2>Skills...</h2>
+    <div class="skills-list">
+      <!-- المهارات -->
+    </div>
+
+    <div class="skills-list">
+      <div class="skill-item">
+        <p>HTML</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" style="width: 85%;"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <p>CSS</p>
+        <div class="progress">
+          <div class="progress-bar bg-info" style="width: 74%;"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <p>JavaScript</p>
+        <div class="progress">
+          <div class="progress-bar bg-warning" style="width: 60%;"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <p>Bootstrap</p>
+        <div class="progress">
+          <div class="progress-bar bg-danger" style="width: 55%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h5>eduction <i class="fas fa-chalkboard"></i>
+     </h5>
+    <p>I studied at the Faculty of Fine and Applied Arts, Sudan University of Science and Technology. I have experience in design programs. I studied the Zero course, w3shool, and many Arab and foreign courses.</p>
+  </div>
+  <div class="o-form">
+  
+    <div class="card">
+      <h2>Design</h2>
+      <div class="skills-list">
+        <!-- المهارات -->
+      </div>
+  
+      <div class="skills-list">
+        <div class="skill-item">
+          <p>Photoshop</p>
+          <div class="progress">
+            <div class="progress-bar bg-success" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <p>Illustrator</p>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 60%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <p>After Effects</p>
+          <div class="progress">
+            <div class="progress-bar bg-warning" style="width: 50%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <p>InDesign</p>
+          <div class="progress">
+            <div class="progress-bar bg-danger" style="width: 55%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <h5>about me <i class="fas fa-user"></i></h5>
+<p>II specialize in creating visually appealing and easy to use interfaces and websites.  With a passion for both coding and design, I strive to deliver high-quality, engaging experiences to my users.. </p>
+      </div>
+    </div>
+
+              
+    <div class="card-content">
+          <div>
+            <h5>text me 💬<h5>
+              </div>
+
+        <p>Enter your message and click Send:</p>
+        <form id="emailForm">
+            <textarea id="message" rows="6" placeholder="Your message...."></textarea>
+            <br>
+            <button type="submit">Send</button>
+            <br>
+            <br>
+            <p>Social networking accounts:</p>
+                        <ul class="social-icons">
+                          <li><a href="https://facebook.com/example"><i class="fab fa-facebook"></i></a></li>
+                          <li><a href="https://instagram.com/example"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="https://twitter.com/example"><i class="fab fa-twitter"></i></a></li>
+                        </ul>
+        </form>
+
+    </div>
+<div class="tools-container">
+      <img src="https://icon-icons.com/downloadimage.php?id=72415&root=931/PNG/256/&file=settings_icon-icons.com_72415.png" class="tools-image">
+      <img src="https://icon-icons.com/downloadimage.php?id=72415&root=931/PNG/256/&file=settings_icon-icons.com_72415.png" class="tools-image">
+      <img src="https://icon-icons.com/downloadimage.php?id=72415&root=931/PNG/256/&file=settings_icon-icons.com_72415.png" class="tools-image">
+    </div>
+<div class="card-Project">
+  <h2>my projects </h2>
+               <div class="card-body">
+                 <h3 class="accordion-toggle" onclick="toggleInfo()">
+                 <p>👆click</p>
+                
+                
+                 <div id="programming-info" style="display: none;">
+                   <p>soooon.</p>
+                 </div>
+               </div>
+             </div>
+  <script>
+document.getElementById("emailForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+  var message = document.getElementById("message").value;
+  var email = "sediagtahoy@gmail.com";
+  var subject = "New Message";
+
+  var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(message);
+  window.location.href = mailtoLink;
+});
+//acrdion html
+function toggleInfo() {
+  var infoDiv = document.getElementById("programming-info");
+  if (infoDiv.style.display === "none") {
+    infoDiv.style.display = "block";
+  } else {
+    infoDiv.style.display = "none";
+  }
+}
+
+/* دالة لفتح القائمة الجانبية */
+
+const openButton = document.getElementById('openSidebar');
+const closeButton = document.getElementById('closeSidebar');
+const sidebar = document.getElementById('sidebar');
+
+openButton.addEventListener('click', function() {
+  sidebar.style.right = '0';
+});
+
+closeButton.addEventListener('click', function() {
+  sidebar.style.right = '-250px';
+});
+const text = "   Al-Siddiq Abdel-Wahed qasem-elsayad"; // النص الذي ترغب في كتابته
+
+let index = 0;
+function typeWriter() {
+  const typewriterElement = document.getElementById("typewriter");
+  if (index < text.length) {
+    typewriterElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, 50); // تحديد الوقت بين حرف وآخر (بالميلي ثانية)
+  }
+}
+
+typeWriter();
+
+//alert
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  setTimeout(() => {
+    Swal.fire({
+      title: 'مرحباً بك!',
+      text: 'مرحباً بك في صفحتي الشخصية',
+      icon: 'success',
+      confirmButtonText: 'موافق'
+    });
+  }, 5000); // 5000 milliseconds = 5 seconds
+});
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.all.min.js"></script>
+
+  
+<footer>
+    <div class="footer-text">
+      &copy;
+      جميع الحقوق محفوظة للموقع<br>
+      - التاريخ: 29 يونيو 2023
+    </div>
+  </footer>
+  
+</body>
+</html>
