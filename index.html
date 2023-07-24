@@ -10,20 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Font1&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      font-family: Arial, sans-serif;
- background-color:w; /* تعديل شفافية اللون هنا */
-
-
-      background-repeat: repeat;
-      background-size: cover;
-    }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  /* خلفية بلون درجات لون بني وأبيض */
+  background: linear-gradient(45deg, #D2B48C, #FFFFFF); /* تعديل الألوان هنا حسب الدرجات المطلوبة */
+  background-repeat: repeat;
+  background-size: cover;
+}
     span {
   font-size: 18px;
   white-space: nowrap; /* للسماح فقط بسطر واحد بدون السطور المتعددة */
@@ -42,18 +42,20 @@
   }
 }
 h1 {
-  padding-left: 15px;
-  font-size: 18px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  color: white;
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  background-color: rgba(160, 82, 45, 0.9); /* بني زجاجي بنسبة شفافية 70% */
-  width: 100%;
-  overflow: hidden;
-}
-
+    position: relative;
+    padding-left: 15px;
+    font-size: 18px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+    font-family: 'Open Sans', sans-serif; /* استخدام خط Open Sans */
+    font-style: italic; /* إضافة التأثير المائل للنص */
+    font-weight: bold;
+    width: 100%;
+    height
+    overflow: hidden;
+    background: linear-gradient(45deg, #8B4513, #A0522D, #D2691E, #CD853F, #A0522D, #8B4513);
+  }
 h2{
   color:#964B00 ;
   font-size: 14px;
@@ -360,18 +362,17 @@ li {
   cursor: pointer;
 }
 footer {
-      ont-weight: bold;
+  font-weight: bold;
   background-color: rgba(160, 82, 45, 0.9); /* بني زجاجي بنسبة شفافية 70% */
-      text-align: center;
-      padding: 20px 10px;
-      position: ;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      margin-top: 200px;
-      color: white;
-
-    }
+  text-align: center;
+  padding: 20px 10px;
+  position: ;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 200px;
+  color: white;
+}
     
     .footer-text {
       font-size: 18px;
@@ -652,7 +653,7 @@ a:hover {
     <img
       src="https://up6.cc/2023/07/168977585366841.jpeg"
       height="250px"
-      width="250px"
+      width="280px"
       alt="صورة صغيرة"
     />
     <!-- إضافة زر وأيقونة Font Awesome -->
@@ -665,7 +666,7 @@ a:hover {
   <img
     src="https://up6.cc/2023/07/168977585368192.jpeg"
     height="250px"
-    width="250px"
+    width="280px"
     alt="صورة صغيرة"
   />
   <br>
@@ -677,7 +678,7 @@ a:hover {
     <img
     src="https://up6.cc/2023/07/168987140073041.jpg"
     height="250px"
-    width="250px"
+    width="280px"
     alt="صورة صغيرة"
   />
   <br>
@@ -711,6 +712,7 @@ a:hover {
   
   
   <script>
+  
 document.getElementById("emailForm").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent form submission
   var message = document.getElementById("message").value;
@@ -769,6 +771,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   }, 5000); // 5000 milliseconds = 5 seconds
 });
   </script>
+  
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.all.min.js"></script>
 
   
