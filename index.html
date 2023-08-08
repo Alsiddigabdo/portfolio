@@ -23,6 +23,8 @@ body {
   background: linear-gradient(45deg, #D2B48C, #FFFFFF); /* تعديل الألوان هنا حسب الدرجات المطلوبة */
   background-repeat: repeat;
   background-size: cover;
+  margin:0px;
+    padding :0px;
 }
     span {
   font-size: 18px;
@@ -42,20 +44,115 @@ body {
   }
 }
 h1 {
-    position: relative;
-    padding-left: 15px;
-    font-size: 18px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    color: white;
-    font-family: 'Open Sans', sans-serif; /* استخدام خط Open Sans */
-    font-style: italic; /* إضافة التأثير المائل للنص */
-    font-weight: bold;
-    width: 100%;
-    height
-    overflow: hidden;
-    background: linear-gradient(45deg, #8B4513, #A0522D, #D2691E, #CD853F, #A0522D, #8B4513);
+  font-family: "Lato", sans-serif;
+
+  letter-spacing: 2px;
+  font-size: px;
+  font-style: bold;
+}
+p {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #333333;
+}
+.header {
+  margin:0px;
+    padding :0px;
+  margin-bottom :30px ;
+  position: relative;
+  text-align: center;
+background: linear-gradient(45deg, #8B4513, #A0522D, #D2691E, #CD853F, #A0522D, #8B4513);
+  color: white;
+  width :100%;
+}
+.logo {
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.inner-header {
+  height: 15vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+} 
+
+
+
+/* Animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
   }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+} 
+
+
+
+
+
+
+
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
 h2{
   color:#964B00 ;
   font-size: 14px;
@@ -361,23 +458,7 @@ li {
   color: #fff;
   cursor: pointer;
 }
-footer {
-  font-weight: bold;
-  background-color: rgba(160, 82, 45, 0.9); /* بني زجاجي بنسبة شفافية 70% */
-  text-align: center;
-  padding: 20px 10px;
-  position: ;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  margin-top: 200px;
-  color: white;
-}
-    
-    .footer-text {
-      font-size: 18px;
-    }
- 
+
    
     .fa-chalkboard:before {
   content: "\f51b";
@@ -488,6 +569,8 @@ a:hover {
 }
 
 
+
+
   </style>
 </head>
 <header><button id="openSidebar"><i class="fas fa-bars"></i></button>
@@ -508,7 +591,28 @@ a:hover {
     
   
               
-              <h1>Portfolio Al-Siddiq Abdel-Wahed</h1>
+                <div class="header">
+        <!--Content before waves-->
+        <div class="inner-header flex">
+            <!--Just the logo.. Don't mind this-->
+            <h1 style>Portfolio Al-Siddiq Abdel-Wahed </h1>
+        </div>
+        <!--Waves Container-->
+        <div> <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg> </div>
+        <!--Waves end-->
+    </div>
 
   
       
@@ -719,12 +823,22 @@ a:hover {
              
              
              
-             
-
-
-</div>
-  </div>
   
+  
+  <div class="toolbar">
+    <!-- أيقونة القائمة -->
+    <a href="#" class="icon menu-icon"><i class="fas fa-bars"></i></a>
+  
+    <!-- أيقونة الرسائل -->
+    <a href="#" class="icon messages-icon"><i class="fas fa-envelope"></i></a>
+  
+    <!-- أيقونة المعرض -->
+    <a href="#" class="icon gallery-icon"><i class="fas fa-images"></i></a>
+  
+    <!-- أيقونة التحميل -->
+    <a href="#" class="icon download-icon"><i class="fas fa-download"></i></a>
+  </div>
+  </div>
   
   
   <script>
@@ -791,13 +905,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.all.min.js"></script>
 
   
-<footer>
-    <div class="footer-text">
-      &copy;
-      جميع الحقوق محفوظة للموقع<br>
-      - التاريخ: 29 يونيو 2023
-    </div>
-  </footer>
-  
+
 </body>
-  </html>
+</html>
+
